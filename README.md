@@ -4,12 +4,11 @@
 - All Dolby & Sony applications and blobs are owned by Dolby™ and Sony™.
 
 ## How to Include extra in your DT (Device Tree)?
-- Inherit the extras repo (for your specific series) from your device.mk as shown
+- Inherit the extras repo (for your specific series) in your device.mk file with as shown:
 ```
-include vendor/sony/extra/Series/extra.mk
+$(call inherit-product, vendor/sony/extra/Series/extra.mk)
 ```
-
-- Set flags accordingly in order to ship different modules of your choosing
+- Set flags accordingly in order to ship different modules of your choosing. Some flags are not supported for some devices. Check the makefiles to make sure.
 
 |Flag|Description|
 |:-:|:-:|

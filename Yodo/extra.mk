@@ -24,6 +24,21 @@ TARGET_SUPPORTS_GAME_CONTROLLERS ?= false
 TARGET_SUPPORTS_XPERIA_STREAM ?= false
 TARGET_SHIPS_XPERIA_LWP ?= false
 TARGET_SHIPS_XPERIA_LWP_NEWEST ?= false
+TARGET_SHIPS_SONY_CAMERA ?= false
+TARGET_SHIPS_SONY_FRAMEWORK ?= false            
+
+# Sony Framework
+ifeq ($(TARGET_SHIPS_SONY_FRAMEWORK),true)
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/sony/extra/Common/framework/system/,$(TARGET_COPY_OUT_SYSTEM)/) \
+    $(call find-copy-subdir-files,*,vendor/sony/extra/Common/framework/system_ext/,$(TARGET_COPY_OUT_SYSTEM_EXT)/) \
+    $(call find-copy-subdir-files,*,vendor/sony/extra/Common/framework/product/,$(TARGET_COPY_OUT_PRODUCT)/)
+endif
+
+# Camera
+ifeq ($(TARGET_SHIPS_SONY_CAMERA),true)
+    $(call inherit-product, vendor/sony/extra/Yodo/camera/camera.mk)
+endif
 
 # Sound Enhancements
 ifeq ($(TARGET_SHIPS_SOUND_ENHANCEMENT),true)

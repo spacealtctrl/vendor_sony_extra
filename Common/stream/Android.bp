@@ -22,6 +22,7 @@ android_app_import {
 	owner: "sony",
 	apk: "proprietary/system/priv-app/GamingAccessorySettings/GamingAccessorySettings.apk",
 	presigned: true,
+	preprocessed: true,
    	dex_preopt: {
 		enabled: false,
 	},
