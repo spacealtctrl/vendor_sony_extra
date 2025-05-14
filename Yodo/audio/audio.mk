@@ -136,6 +136,7 @@ PRODUCT_ODM_PROPERTIES += \
 PRODUCT_PACKAGES += \
     daxService \
     DolbySound \
+    SoundEnhancement \
     ThreeSixtyRASettings \
     ThreeSixtyRASystem \
     ThreeSixtyRASystem-pdx234-Overlay \
