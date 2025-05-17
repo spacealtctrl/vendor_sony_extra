@@ -27,4 +27,6 @@ PRODUCT_PACKAGES += \
     CameraAddonPermission \
     CameraCommonPermission \
     CameraPanorama-Yodo \
-    SomcMovieCreator-AsahiYodo
+    SomcMovieCreator-AsahiYodo \
+    SomcCameraApp-Asahi \
+    SomcCameraCalibration-Pdx245
