@@ -56,9 +56,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "CameraCommon",
+	name: "CameraCommon-Yodo",
 	owner: "sony",
-	apk: "CameraCommon/CameraCommon.apk",
+	apk: "CameraCommon-Yodo/CameraCommon-Yodo.apk",
 	presigned: true,
 	dex_preopt: {
 		enabled: false,

@@ -23,7 +23,7 @@ PRODUCT_PACKAGES += \
     SomcPhotoPro \
     SomcCinemaPro \
     SomcVideoPro \
-    CameraCommon \
+    CameraCommon-Yodo \
     CameraAddonPermission \
     CameraCommonPermission \
     CameraPanorama-Yodo \

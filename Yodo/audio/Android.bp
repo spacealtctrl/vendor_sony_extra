@@ -45,12 +45,12 @@ android_app_import {
 android_app_import {
 	name: "ThreeSixtyRASettings",
 	owner: "sony",
-	apk: "proprietary/system_ext/app/ThreeSixtyRASettings/ThreeSixtyRASettings.apk",
+	apk: "proprietary/product/app/ThreeSixtyRASettings/ThreeSixtyRASettings.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
-	system_ext_specific: true,
+	product_specific: true,
 }
 
 android_app_import {
@@ -66,9 +66,9 @@ android_app_import {
 }
 
 android_app_import {
-        name: "ThreeSixtyRASystem-Overlay",
+        name: "ThreeSixtyRASystem-pdx234-Overlay",
         owner: "sony",
-        apk: "proprietary/product/overlay/ThreeSixtyRASystem-Overlay.apk",
+        apk: "proprietary/product/overlay/ThreeSixtyRASystem-pdx234-Overlay.apk",
         certificate: "platform",
         dex_preopt: {
                 enabled: false,
@@ -79,6 +79,745 @@ android_app_import {
 dex_import {
 	name: "com.sony.threesixtyra.audiofx",
 	owner: "sony",
-	jars: ["proprietary/system_ext/framework/com.sony.threesixtyra.audiofx.jar"],
+	jars: ["proprietary/product/framework/com.sony.threesixtyra.audiofx.jar"],
+	product_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libmmparserextractor",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/system_ext/lib64/extractors/libmmparserextractor.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	relative_install_path: "extractors",
 	system_ext_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libavenhancements",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/system_ext/lib64/libavenhancements.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	system_ext_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "vendor.dolby.hardware.dms@2.0",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/system_ext/lib64/vendor.dolby.hardware.dms@2.0.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libXtcApi",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libXtcApi.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libaudiokeymgr",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libaudiokeymgr.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libaudiosnpewrapper",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libaudiosnpewrapper.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libaudiosnpewrapper_context",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libaudiosnpewrapper_context.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libcodec2_soft_ac4dec",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcodec2_soft_ac4dec.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libcodec2_soft_ddpdec",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcodec2_soft_ddpdec.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libcodec2_soft_dolby",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcodec2_soft_dolby.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libcodec2_soft_mha1dec",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcodec2_soft_mha1dec.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libcodec2_soft_mhm1dec",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcodec2_soft_mhm1dec.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libcodec2_soft_common_prebuilt",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcodec2_soft_common_prebuilt.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libcodec2_store_dolby",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcodec2_store_dolby.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libdapparamstorage",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libdapparamstorage.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libdeccfg",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libdeccfg.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libdlbdsservice",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libdlbdsservice.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libdlbpreg",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libdlbpreg.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libiVptApi",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libiVptApi.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libiVptHkiDec",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libiVptHkiDec.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libiVptLibC",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libiVptLibC.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "liboem_specific",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/liboem_specific.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "librebuffering",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/librebuffering.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libsfplugin_ccodec_utils_prebuilt",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsfplugin_ccodec_utils_prebuilt.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libthreesixty_ra_codec2_store",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libthreesixty_ra_codec2_store.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libtsrspkenhance",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libtsrspkenhance.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libupmix-lib",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libupmix-lib.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libznr",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libznr.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libbundlewrapper1",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/soundfx/libbundlewrapper1.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	relative_install_path: "soundfx",
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libbundlewrapper2",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/soundfx/libbundlewrapper2.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	relative_install_path: "soundfx",
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libbundlewrapper3",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/soundfx/libbundlewrapper3.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	relative_install_path: "soundfx",
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libbundlewrapper4",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/soundfx/libbundlewrapper4.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	relative_install_path: "soundfx",
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libdlbvol",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/soundfx/libdlbvol.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	relative_install_path: "soundfx",
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libdnnrwrapper",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/soundfx/libdnnrwrapper.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	relative_install_path: "soundfx",
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libswdap",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/soundfx/libswdap.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	relative_install_path: "soundfx",
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libswgamedap",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/soundfx/libswgamedap.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	relative_install_path: "soundfx",
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libswvqe",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/soundfx/libswvqe.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	relative_install_path: "soundfx",
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libtsrspatializer",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/soundfx/libtsrspatializer.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	relative_install_path: "soundfx",
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libtsrupmix",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/soundfx/libtsrupmix.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	relative_install_path: "soundfx",
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "libznrwrapper",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/soundfx/libznrwrapper.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	relative_install_path: "soundfx",
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "vendor.dolby.hardware.dms@2.0-impl",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+cc_prebuilt_library_shared {
+	name: "vendor.dolby.hardware.dms@2.0_prebuilt",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.dolby.hardware.dms@2.0_prebuilt.so"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "android.hardware.media.c2@1.0-threesixty-ra-service",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/bin/hw/android.hardware.media.c2@1.0-threesixty-ra-service"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	relative_install_path: "hw",
+	soc_specific: true,
+}
+cc_prebuilt_binary {
+	name: "vendor.dolby.hardware.dms@2.0-service",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	relative_install_path: "hw",
+	soc_specific: true,
+}
+cc_prebuilt_binary {
+	name: "vendor.dolby.media.c2@1.0-service",
+	owner: "sony",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/bin/hw/vendor.dolby.media.c2@1.0-service"],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	check_elf_files: false,
+	relative_install_path: "hw",
+	soc_specific: true,
 }
