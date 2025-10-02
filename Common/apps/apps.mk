@@ -22,8 +22,6 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     MusicPro \
     SemcMusic \
-    MovieCreator \
     SomcColorGamut \
-    SomcMediaExtensionProvider \
-    UsbExtOutAudio \
-    VideoCreator
+    SomcMediaExtensionProvider-Yodo \
+    UsbExtOutAudio
