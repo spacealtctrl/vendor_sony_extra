@@ -18,7 +18,7 @@ soong_namespace {
 android_app_import {
 	name: "SomcDualshockManager",
 	owner: "sony",
-	apk: "DualshockManager/DualshockManager.apk",
+	apk: "SomcDualshockManager/SomcDualshockManager.apk",
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
