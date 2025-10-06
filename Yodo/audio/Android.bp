@@ -853,3 +853,27 @@ cc_prebuilt_binary {
 	relative_install_path: "hw",
 	soc_specific: true,
 }
+prebuilt_etc_xml {
+    name: "vendor.dolby.hardware.dms.xml",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/dms/vendor.dolby.hardware.dms.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+prebuilt_etc_xml {
+    name: "vendor.dolby.media.c2@1.0-service.xml",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/dms/vendor.dolby.media.c2@1.0-service.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+prebuilt_etc_xml {
+    name: "vendor.threesixty_ra.codec2.xml",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/threesixty/vendor.threesixty_ra.codec2.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}

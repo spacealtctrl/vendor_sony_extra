@@ -31,11 +31,6 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(LOCAL_AUDIO)/proprietary/vendor/etc/vintf/dms/dolby_framework_matrix.xml \
     $(LOCAL_AUDIO)/proprietary/vendor/etc/vintf/threesixty/threesixty_framework_matrix.xml
 
-DEVICE_MANIFEST_FILE += \
-    $(LOCAL_AUDIO)/proprietary/vendor/etc/vintf/dms/vendor.dolby.media.c2.xml \
-    $(LOCAL_AUDIO)/proprietary/vendor/etc/vintf/dms/vendor.dolby.hardware.dms.xml \
-    $(LOCAL_AUDIO)/proprietary/vendor/etc/vintf/threesixty/vendor.threesixty_ra.codec2.xml
-
 # Dolby DAP
 AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := true
 
@@ -110,7 +105,10 @@ PRODUCT_PACKAGES += \
     vendor.dolby.hardware.dms@2.0_prebuilt \
     android.hardware.media.c2@1.0-threesixty-ra-service \
     vendor.dolby.hardware.dms@2.0-service \
-    vendor.dolby.media.c2@1.0-service
+    vendor.dolby.media.c2@1.0-service \
+    vendor.dolby.hardware.dms.xml \
+    vendor.dolby.media.c2@1.0-service.xml \
+    vendor.threesixty_ra.codec2.xml
 
 # Codec2 Props
 PRODUCT_VENDOR_PROPERTIES += \
