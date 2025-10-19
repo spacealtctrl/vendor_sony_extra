@@ -56,9 +56,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "CameraCommon-Yodo",
+	name: "CameraCommon",
 	owner: "sony",
-	apk: "CameraCommon-Yodo/CameraCommon-Yodo.apk",
+	apk: "CameraCommon/CameraCommon.apk",
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -121,9 +121,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "SomcCameraApp-Asahi",
+	name: "SomcCameraApp-Shimanto",
 	owner: "sony",
-	apk: "SomcCameraApp-Asahi/SomcCameraApp-Asahi.apk",
+	apk: "SomcCameraApp-Shimanto/SomcCameraApp-Shimanto.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,

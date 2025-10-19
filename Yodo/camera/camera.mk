@@ -23,10 +23,10 @@ PRODUCT_PACKAGES += \
     SomcPhotoPro \
     SomcCinemaPro \
     SomcVideoPro \
-    CameraCommon-Yodo \
+    CameraCommon \
     CameraAddonPermission \
     CameraCommonPermission \
     CameraPanorama-Yodo \
     SomcMovieCreator-AsahiYodo \
-    SomcCameraApp-Asahi \
+    SomcCameraApp-Shimanto \
     SomcCameraCalibration-Pdx245
