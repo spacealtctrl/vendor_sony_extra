@@ -4,7 +4,6 @@
 android_app_import {
     name: "CameraPanorama",
     apk: "CameraPanorama-Yodo.apk",
-    certificate: "PRESIGNED",
     privileged: true,
     vendor: true,
     preprocessed: true,
