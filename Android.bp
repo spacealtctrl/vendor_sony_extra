@@ -194,20 +194,6 @@ java_import {
 }
 
 prebuilt_etc {
-	name: "com.sony.device.xml",
-	owner: "sony",
-	src: "Common/framework/system/etc/permissions/com.sony.device.xml",
-	sub_dir: "permissions",
-}
-
-java_import {
-	name: "com.sony.device",
-	owner: "sony",
-	jars: ["Common/framework/system/framework/com.sony.device.jar"],
-	installable: true,
-}
-
-prebuilt_etc {
 	name: "com.sonyericsson.colorextraction.xml",
 	owner: "sony",
 	src: "Common/framework/system/etc/permissions/com.sonyericsson.colorextraction.xml",
