@@ -42,8 +42,6 @@ PRODUCT_PACKAGES += \
     com.sonymobile.album.xml \
     com.sonymobile.album \
     com.sonymobile.album.internal \
-    com.sonyericsson.colorextraction.xml \
-    com.sonyericsson.colorextraction_impl \
     com.sonymobile.mmwdiapi.somc-mmwdiapi.xml \
     somc-ext-mmwdiapi \
     com.google.protobuf-2.3.0.xml \
