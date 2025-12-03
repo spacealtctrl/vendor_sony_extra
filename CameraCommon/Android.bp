@@ -4,7 +4,6 @@
 android_app_import {
     name: "CameraCommon",
     apk: "CameraCommon.apk",
-    certificate: "PRESIGNED",
     privileged: true,
     vendor: true,
     preprocessed: true,
