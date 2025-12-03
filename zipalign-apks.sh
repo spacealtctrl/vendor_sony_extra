@@ -56,6 +56,8 @@ for apk in "${APKS[@]}"; do
         echo "  ✓ Alignment successful"
     else
         echo "  ✗ Alignment failed"
+        # Clean up temporary file if it exists
+        [ -f "$aligned_apk" ] && rm -f "$aligned_apk"
         verification_failed=1
         echo ""
         continue
@@ -68,7 +70,7 @@ for apk in "${APKS[@]}"; do
     
     # Verify alignment
     echo "  Verifying alignment..."
-    if zipalign -c 4 "$apk"; then
+    if zipalign -c 4 "$apk" &> /dev/null; then
         echo "  ✓ Verification successful - APK is properly aligned"
     else
         echo "  ✗ Verification failed - APK is NOT properly aligned"
