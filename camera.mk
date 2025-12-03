@@ -46,8 +46,6 @@ PRODUCT_PACKAGES += \
     somc-ext-mmwdiapi \
     com.google.protobuf-2.3.0.xml \
     com.google.protobuf-2.3.0-dummy \
-    com.sonyericsson.idd.xml \
-    com.sonyericsson.idd_impl \
     com.sonymobile.home.resourceprovider.xml \
     com.sonymobile.home.resourceprovider \
     com.sonymobile.extmonitorapp.xml
