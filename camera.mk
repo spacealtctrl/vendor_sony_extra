@@ -13,8 +13,8 @@ PRODUCT_PACKAGES += \
     CameraCommon \
     CameraPanorama \
     MovieCreator \
-    CameraApp \
-    CameraCalibration
+    SomcCameraApp \
+    SomcCameraCalibration
 
 # Permissions
 PRODUCT_PACKAGES += \
