@@ -144,3 +144,152 @@ android_app_import {
 	preprocessed: true,
 	product_specific: true,
 }
+
+// Camera Permissions
+
+prebuilt_etc {
+	name: "privapp-permissions-product-sony.xml",
+	owner: "sony",
+	src: "Common/framework/product/etc/permissions/privapp-permissions-product-sony.xml",
+	sub_dir: "permissions",
+	product_specific: true,
+}
+
+prebuilt_etc {
+	name: "privapp-permissions-system-sony.xml",
+	owner: "sony",
+	src: "Common/framework/system/etc/permissions/privapp-permissions-system-sony.xml",
+	sub_dir: "permissions",
+}
+
+prebuilt_etc {
+	name: "privapp-permissions-systemext-sony.xml",
+	owner: "sony",
+	src: "Common/framework/system_ext/etc/permissions/privapp-permissions-systemext-sony.xml",
+	sub_dir: "permissions",
+	system_ext_specific: true,
+}
+
+// Framework Libraries - System
+
+prebuilt_etc {
+	name: "com.sonymobile.album.xml",
+	owner: "sony",
+	src: "Common/framework/system/etc/permissions/com.sonymobile.album.xml",
+	sub_dir: "permissions",
+}
+
+java_import {
+	name: "com.sonymobile.album",
+	owner: "sony",
+	jars: ["Common/framework/system/framework/com.sonymobile.album.jar"],
+	installable: true,
+}
+
+java_import {
+	name: "com.sonymobile.album.internal",
+	owner: "sony",
+	jars: ["Common/framework/system/framework/com.sonymobile.album.internal.jar"],
+	installable: true,
+}
+
+prebuilt_etc {
+	name: "com.sony.device.xml",
+	owner: "sony",
+	src: "Common/framework/system/etc/permissions/com.sony.device.xml",
+	sub_dir: "permissions",
+}
+
+java_import {
+	name: "com.sony.device",
+	owner: "sony",
+	jars: ["Common/framework/system/framework/com.sony.device.jar"],
+	installable: true,
+}
+
+prebuilt_etc {
+	name: "com.sonyericsson.colorextraction.xml",
+	owner: "sony",
+	src: "Common/framework/system/etc/permissions/com.sonyericsson.colorextraction.xml",
+	sub_dir: "permissions",
+}
+
+java_import {
+	name: "com.sonyericsson.colorextraction_impl",
+	owner: "sony",
+	jars: ["Common/framework/system/framework/com.sonyericsson.colorextraction_impl.jar"],
+	installable: true,
+}
+
+prebuilt_etc {
+	name: "com.sonymobile.mmwdiapi.somc-mmwdiapi.xml",
+	owner: "sony",
+	src: "Common/framework/system/etc/permissions/com.sonymobile.mmwdiapi.somc-mmwdiapi.xml",
+	sub_dir: "permissions",
+}
+
+// Framework Libraries - Product
+
+prebuilt_etc {
+	name: "com.google.protobuf-2.3.0.xml",
+	owner: "sony",
+	src: "Common/framework/product/etc/permissions/com.google.protobuf-2.3.0.xml",
+	sub_dir: "permissions",
+	product_specific: true,
+}
+
+java_import {
+	name: "com.google.protobuf-2.3.0-dummy",
+	owner: "sony",
+	jars: ["Common/framework/product/framework/com.google.protobuf-2.3.0-dummy.jar"],
+	installable: true,
+	product_specific: true,
+}
+
+prebuilt_etc {
+	name: "com.sonyericsson.idd.xml",
+	owner: "sony",
+	src: "Common/framework/product/etc/permissions/com.sonyericsson.idd.xml",
+	sub_dir: "permissions",
+	product_specific: true,
+}
+
+java_import {
+	name: "com.sonyericsson.idd_impl",
+	owner: "sony",
+	jars: ["Common/framework/product/framework/com.sonyericsson.idd_impl.jar"],
+	installable: true,
+	product_specific: true,
+}
+
+prebuilt_etc {
+	name: "com.sonymobile.home.resourceprovider.xml",
+	owner: "sony",
+	src: "Common/framework/product/etc/permissions/com.sonymobile.home.resourceprovider.xml",
+	sub_dir: "permissions",
+	product_specific: true,
+}
+
+java_import {
+	name: "com.sonymobile.home.resourceprovider",
+	owner: "sony",
+	jars: ["Common/framework/product/framework/com.sonymobile.home.resourceprovider.jar"],
+	installable: true,
+	product_specific: true,
+}
+
+prebuilt_etc {
+	name: "com.sonymobile.extmonitorapp.xml",
+	owner: "sony",
+	src: "Common/framework/product/etc/permissions/com.sonymobile.extmonitorapp.xml",
+	sub_dir: "permissions",
+	product_specific: true,
+}
+
+java_import {
+	name: "somc-ext-mmwdiapi",
+	owner: "sony",
+	jars: ["Common/framework/product/framework/somc-ext-mmwdiapi.jar"],
+	installable: true,
+	product_specific: true,
+}
