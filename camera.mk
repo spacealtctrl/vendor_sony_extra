@@ -30,3 +30,28 @@ PRODUCT_PACKAGES += \
     MovieCreator \
     CameraApp \
     CameraCalibration
+
+# Camera Permissions
+PRODUCT_PACKAGES += \
+    privapp-permissions-product-sony.xml \
+    privapp-permissions-system-sony.xml \
+    privapp-permissions-systemext-sony.xml
+
+# Framework Libraries
+PRODUCT_PACKAGES += \
+    com.sonymobile.album.xml \
+    com.sonymobile.album \
+    com.sonymobile.album.internal \
+    com.sony.device.xml \
+    com.sony.device \
+    com.sonyericsson.colorextraction.xml \
+    com.sonyericsson.colorextraction_impl \
+    com.sonymobile.mmwdiapi.somc-mmwdiapi.xml \
+    somc-ext-mmwdiapi \
+    com.google.protobuf-2.3.0.xml \
+    com.google.protobuf-2.3.0-dummy \
+    com.sonyericsson.idd.xml \
+    com.sonyericsson.idd_impl \
+    com.sonymobile.home.resourceprovider.xml \
+    com.sonymobile.home.resourceprovider \
+    com.sonymobile.extmonitorapp.xml
