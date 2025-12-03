@@ -233,22 +233,6 @@ java_import {
 }
 
 prebuilt_etc {
-	name: "com.sonyericsson.idd.xml",
-	owner: "sony",
-	src: "Common/framework/product/etc/permissions/com.sonyericsson.idd.xml",
-	sub_dir: "permissions",
-	product_specific: true,
-}
-
-java_import {
-	name: "com.sonyericsson.idd_impl",
-	owner: "sony",
-	jars: ["Common/framework/product/framework/com.sonyericsson.idd_impl.jar"],
-	installable: true,
-	product_specific: true,
-}
-
-prebuilt_etc {
 	name: "com.sonymobile.home.resourceprovider.xml",
 	owner: "sony",
 	src: "Common/framework/product/etc/permissions/com.sonymobile.home.resourceprovider.xml",
