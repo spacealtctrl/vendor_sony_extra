@@ -10,7 +10,8 @@ android_app_import {
     name: "PhotoPro",
     owner: "sony",
     apk: "PhotoPro/SomcPhotoPro.apk",
-    presigned: true,
+    certificate: "PRESIGNED",
+    preprocessed: true,
     overrides: ["Aperture"],
     dex_preopt: {
         enabled: false,
@@ -23,7 +24,8 @@ android_app_import {
     name: "CinemaPro",
     owner: "sony",
     apk: "CinemaPro/SomcCinemaPro.apk",
-    presigned: true,
+    certificate: "PRESIGNED",
+    preprocessed: true,
     dex_preopt: {
         enabled: false,
     },
@@ -35,7 +37,8 @@ android_app_import {
     name: "VideoPro",
     owner: "sony",
     apk: "VideoPro/SomcVideoPro.apk",
-    presigned: true,
+    certificate: "PRESIGNED",
+    preprocessed: true,
     dex_preopt: {
         enabled: false,
     },
@@ -47,7 +50,8 @@ android_app_import {
     name: "CameraCommon",
     owner: "sony",
     apk: "CameraCommon/CameraCommon.apk",
-    presigned: true,
+    certificate: "PRESIGNED",
+    preprocessed: true,
     dex_preopt: {
         enabled: false,
     },
@@ -59,7 +63,8 @@ android_app_import {
     name: "CameraPanorama",
     owner: "sony",
     apk: "CameraPanorama/CameraPanorama-Yodo.apk",
-    presigned: true,
+    certificate: "PRESIGNED",
+    preprocessed: true,
     dex_preopt: {
         enabled: false,
     },
@@ -71,7 +76,8 @@ android_app_import {
     name: "MovieCreator",
     owner: "sony",
     apk: "MovieCreator/SomcMovieCreator-AsahiYodo.apk",
-    presigned: true,
+    certificate: "PRESIGNED",
+    preprocessed: true,
     dex_preopt: {
         enabled: false,
     },
@@ -83,7 +89,8 @@ android_app_import {
     name: "CameraApp",
     owner: "sony",
     apk: "CameraApp/SomcCameraApp-Shimanto.apk",
-    presigned: true,
+    certificate: "PRESIGNED",
+    preprocessed: true,
     dex_preopt: {
         enabled: false,
     },
@@ -95,7 +102,8 @@ android_app_import {
     name: "CameraCalibration",
     owner: "sony",
     apk: "CameraCalibration/SomcCameraCalibration-Pdx245.apk",
-    presigned: true,
+    certificate: "PRESIGNED",
+    preprocessed: true,
     dex_preopt: {
         enabled: false,
     },
