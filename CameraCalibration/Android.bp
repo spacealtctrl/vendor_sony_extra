@@ -4,7 +4,6 @@
 android_app_import {
     name: "SomcCameraCalibration",
     apk: "SomcCameraCalibration-Pdx245.apk",
-    certificate: "PRESIGNED",
     privileged: true,
     vendor: true,
     preprocessed: true,
