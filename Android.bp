@@ -1,265 +1,148 @@
 // Copyright (C) 2024 XperiaLabs Project
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//      http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+// SPDX-License-Identifier: Apache-2.0
 
 soong_namespace {
 }
 
+// ===== Camera Apps =====
+
 android_app_import {
-	name: "PhotoPro",
-	owner: "sony",
-	apk: "PhotoPro/SomcPhotoPro.apk",
-	presigned: true,
-	overrides: ["Aperture"],
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	preprocessed: true,
-	product_specific: true,
+    name: "PhotoPro",
+    owner: "sony",
+    apk: "PhotoPro/SomcPhotoPro.apk",
+    presigned: true,
+    overrides: ["Aperture"],
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
 }
 
 android_app_import {
-	name: "CinemaPro",
-	owner: "sony",
-	apk: "CinemaPro/SomcCinemaPro.apk",
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	preprocessed: true,
-	product_specific: true,
+    name: "CinemaPro",
+    owner: "sony",
+    apk: "CinemaPro/SomcCinemaPro.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
 }
 
 android_app_import {
-	name: "VideoPro",
-	owner: "sony",
-	apk: "VideoPro/SomcVideoPro.apk",
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	preprocessed: true,
-	product_specific: true,
+    name: "VideoPro",
+    owner: "sony",
+    apk: "VideoPro/SomcVideoPro.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
 }
 
 android_app_import {
-	name: "CameraCommon",
-	owner: "sony",
-	apk: "CameraCommon/CameraCommon.apk",
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	preprocessed: true,
-	product_specific: true,
+    name: "CameraCommon",
+    owner: "sony",
+    apk: "CameraCommon/CameraCommon.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
 }
 
 android_app_import {
-	name: "CameraAddonPermission",
-	owner: "sony",
-	apk: "CameraAddonPermission/CameraAddonPermission.apk",
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	preprocessed: true,
-	product_specific: true,
+    name: "CameraPanorama",
+    owner: "sony",
+    apk: "CameraPanorama/CameraPanorama-Yodo.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
 }
 
 android_app_import {
-	name: "CameraCommonPermission",
-	owner: "sony",
-	apk: "CameraCommonPermission/CameraCommonPermission.apk",
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	preprocessed: true,
-	product_specific: true,
+    name: "MovieCreator",
+    owner: "sony",
+    apk: "MovieCreator/SomcMovieCreator-AsahiYodo.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
 }
 
 android_app_import {
-	name: "CameraPanorama",
-	owner: "sony",
-	apk: "CameraPanorama/CameraPanorama-Yodo.apk",
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	preprocessed: true,
-	product_specific: true,
+    name: "CameraApp",
+    owner: "sony",
+    apk: "CameraApp/SomcCameraApp-Shimanto.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
 }
 
 android_app_import {
-	name: "MovieCreator",
-	owner: "sony",
-	apk: "MovieCreator/SomcMovieCreator-AsahiYodo.apk",
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	preprocessed: true,
-	product_specific: true,
+    name: "CameraCalibration",
+    owner: "sony",
+    apk: "CameraCalibration/SomcCameraCalibration-Pdx245.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
 }
 
-android_app_import {
-	name: "CameraApp",
-	owner: "sony",
-	apk: "CameraApp/SomcCameraApp-Shimanto.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
-}
-
-android_app_import {
-	name: "CameraCalibration",
-	owner: "sony",
-	apk: "CameraCalibration/SomcCameraCalibration-Pdx245.apk",
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	preprocessed: true,
-	product_specific: true,
-}
-
-// Camera Permissions
+// ===== Permissions =====
 
 prebuilt_etc {
-	name: "privapp-permissions-product-sony.xml",
-	owner: "sony",
-	src: "Common/framework/product/etc/permissions/privapp-permissions-product-sony.xml",
-	sub_dir: "permissions",
-	product_specific: true,
+    name: "privapp-permissions-sony-camera.xml",
+    owner: "sony",
+    src: "Common/etc/permissions/privapp-permissions-sony-camera.xml",
+    sub_dir: "permissions",
+    product_specific: true,
 }
 
-prebuilt_etc {
-	name: "privapp-permissions-system-sony.xml",
-	owner: "sony",
-	src: "Common/framework/system/etc/permissions/privapp-permissions-system-sony.xml",
-	sub_dir: "permissions",
-}
+// ===== Framework Libraries (Product) =====
 
 prebuilt_etc {
-	name: "privapp-permissions-systemext-sony.xml",
-	owner: "sony",
-	src: "Common/framework/system_ext/etc/permissions/privapp-permissions-systemext-sony.xml",
-	sub_dir: "permissions",
-	system_ext_specific: true,
-}
-
-// Framework Libraries - System
-
-prebuilt_etc {
-	name: "com.sonymobile.album.xml",
-	owner: "sony",
-	src: "Common/framework/system/etc/permissions/com.sonymobile.album.xml",
-	sub_dir: "permissions",
+    name: "com.sonymobile.album.xml",
+    owner: "sony",
+    src: "Common/etc/permissions/com.sonymobile.album.xml",
+    sub_dir: "permissions",
+    product_specific: true,
 }
 
 java_import {
-	name: "com.sonymobile.album",
-	owner: "sony",
-	jars: ["Common/framework/system/framework/com.sonymobile.album.jar"],
-	installable: true,
-}
-
-java_import {
-	name: "com.sonymobile.album.internal",
-	owner: "sony",
-	jars: ["Common/framework/system/framework/com.sonymobile.album.internal.jar"],
-	installable: true,
+    name: "com.sonymobile.album",
+    owner: "sony",
+    jars: ["Common/framework/com.sonymobile.album.jar"],
+    installable: true,
+    product_specific: true,
 }
 
 prebuilt_etc {
-	name: "com.sonyericsson.colorextraction.xml",
-	owner: "sony",
-	src: "Common/framework/system/etc/permissions/com.sonyericsson.colorextraction.xml",
-	sub_dir: "permissions",
+    name: "com.google.protobuf-2.3.0.xml",
+    owner: "sony",
+    src: "Common/etc/permissions/com.google.protobuf-2.3.0.xml",
+    sub_dir: "permissions",
+    product_specific: true,
 }
 
 java_import {
-	name: "com.sonyericsson.colorextraction_impl",
-	owner: "sony",
-	jars: ["Common/framework/system/framework/com.sonyericsson.colorextraction_impl.jar"],
-	installable: true,
-}
-
-prebuilt_etc {
-	name: "com.sonymobile.mmwdiapi.somc-mmwdiapi.xml",
-	owner: "sony",
-	src: "Common/framework/system/etc/permissions/com.sonymobile.mmwdiapi.somc-mmwdiapi.xml",
-	sub_dir: "permissions",
-}
-
-// Framework Libraries - Product
-
-prebuilt_etc {
-	name: "com.google.protobuf-2.3.0.xml",
-	owner: "sony",
-	src: "Common/framework/product/etc/permissions/com.google.protobuf-2.3.0.xml",
-	sub_dir: "permissions",
-	product_specific: true,
-}
-
-java_import {
-	name: "com.google.protobuf-2.3.0-dummy",
-	owner: "sony",
-	jars: ["Common/framework/product/framework/com.google.protobuf-2.3.0-dummy.jar"],
-	installable: true,
-	product_specific: true,
-}
-
-prebuilt_etc {
-	name: "com.sonymobile.home.resourceprovider.xml",
-	owner: "sony",
-	src: "Common/framework/product/etc/permissions/com.sonymobile.home.resourceprovider.xml",
-	sub_dir: "permissions",
-	product_specific: true,
-}
-
-java_import {
-	name: "com.sonymobile.home.resourceprovider",
-	owner: "sony",
-	jars: ["Common/framework/product/framework/com.sonymobile.home.resourceprovider.jar"],
-	installable: true,
-	product_specific: true,
-}
-
-prebuilt_etc {
-	name: "com.sonymobile.extmonitorapp.xml",
-	owner: "sony",
-	src: "Common/framework/product/etc/permissions/com.sonymobile.extmonitorapp.xml",
-	sub_dir: "permissions",
-	product_specific: true,
-}
-
-java_import {
-	name: "somc-ext-mmwdiapi",
-	owner: "sony",
-	jars: ["Common/framework/product/framework/somc-ext-mmwdiapi.jar"],
-	installable: true,
-	product_specific: true,
+    name: "com.google.protobuf-2.3.0",
+    owner: "sony",
+    jars: ["Common/framework/com.google.protobuf-2.3.0.jar"],
+    installable: true,
+    product_specific: true,
 }
