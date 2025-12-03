@@ -1,0 +1,14 @@
+// Copyright (C) 2024 XperiaLabs Project
+// SPDX-License-Identifier: Apache-2.0
+
+android_app_import {
+    name: "CameraPanorama",
+    apk: "CameraPanorama-Yodo.apk",
+    certificate: "PRESIGNED",
+    privileged: true,
+    vendor: true,
+    preprocessed: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}
