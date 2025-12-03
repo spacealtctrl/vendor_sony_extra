@@ -23,6 +23,7 @@ TARGET_SHIPS_SOUND_ENHANCEMENT ?= false
 TARGET_SUPPORTS_GAME_CONTROLLERS ?= false
 TARGET_SUPPORTS_XPERIA_STREAM ?= false
 TARGET_SHIPS_XPERIA_LWP ?= false
+TARGET_SHIPS_XPERIA_LWP_SELECTED ?= false
 TARGET_SHIPS_XPERIA_LWP_NEWEST ?= false
 TARGET_SHIPS_SONY_CAMERA ?= false
 TARGET_SHIPS_SONY_FRAMEWORK ?= false            
@@ -58,6 +59,11 @@ endif
 # Xperia LWPs
 ifeq ($(TARGET_SHIPS_XPERIA_LWP),true)
     $(call inherit-product, vendor/sony/extra/Common/lwp/lwp.mk)
+endif
+
+# Xperia LWPs | Only Selected version (TARGET_XPERIA_LWP_VERSION)
+ifeq ($(TARGET_SHIPS_XPERIA_LWP_SELECTED),true)
+    $(call inherit-product, vendor/sony/extra/Common/lwp/lwp-selected.mk)
 endif
 
 # Xperia LWPs | Newest

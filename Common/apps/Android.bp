@@ -20,19 +20,20 @@ android_app_import {
 	owner: "sony",
 	apk: "MusicPro/MusicPro.apk",
 	presigned: true,
-        overrides: ["Recorder, RecorderPrebuilt"],
+    overrides: ["Recorder, RecorderPrebuilt"],
 	dex_preopt: {
 		enabled: false,
 	},
 	privileged: true,
 	preprocessed: true,
 	product_specific: true,
+	skip_preprocessed_apk_checks: true,
 }
 
 android_app_import {
 	name: "SemcMusic",
 	owner: "sony",
-	apk: "SonyMusic/SonyMusic.apk",
+	apk: "SemcMusic/SemcMusic.apk",
 	presigned: true,
         overrides: ["Eleven"],
 	dex_preopt: {
@@ -47,7 +48,7 @@ android_app_import {
 android_app_import {
 	name: "SomcColorGamut",
 	owner: "sony",
-	apk: "ColorGamut/ColorGamut.apk",
+	apk: "SomcColorGamut/SomcColorGamut.apk",
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -58,15 +59,14 @@ android_app_import {
 }
 
 android_app_import {
-	name: "SomcMediaExtensionProvider",
+	name: "SomcMediaExtensionProvider-Yodo",
 	owner: "sony",
-	apk: "MediaExtensionProvider/MediaExtensionProvider.apk",
+	apk: "SomcMediaExtensionProvider-Yodo/SomcMediaExtensionProvider-Yodo.apk",
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
 	privileged: true,
-	skip_preprocessed_apk_checks: true,
 	preprocessed: true,
 	product_specific: true,
 }
@@ -80,20 +80,6 @@ android_app_import {
 		enabled: false,
 	},
 	privileged: true,
-	preprocessed: true,
-	product_specific: true,
-}
-
-android_app_import {
-	name: "VideoCreator",
-	owner: "sony",
-	apk: "VideoCreator/VideoCreator.apk",
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	skip_preprocessed_apk_checks: true,
 	preprocessed: true,
 	product_specific: true,
 }

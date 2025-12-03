@@ -1,4 +1,4 @@
-r_dir_file(hal_audio_default, threesixtyra_vendor_data_file)
+r_dir_file(hal_audio_default, vendor_threesixtyra_data_file)
 
 allow hal_audio_default hal_dms_hwservice:hwservice_manager find;
 allow hal_audio_default vendor_hal_secd_hwservice:hwservice_manager { find };
@@ -11,3 +11,5 @@ allow hal_audio_default vendor_hal_secd_default:binder { call };
 allow hal_audio_default vendor_tee_listener_prop:file { read open getattr map };
 allow hal_audio_default vendor_camera_running_status_prop:file { read open getattr map };
 allow hal_audio_default vendor_camera_sensor_prop:file { read open getattr map };
+
+set_prop(hal_audio_default, vendor_sony_spatializer_dolby_prop)

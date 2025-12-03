@@ -16,9 +16,9 @@ soong_namespace {
 }
 
 android_app_import {
-	name: "SomcPhotoPro-Yodo",
+	name: "SomcPhotoPro",
 	owner: "sony",
-	apk: "SomcPhotoPro-Yodo/SomcPhotoPro-Yodo.apk",
+	apk: "SomcPhotoPro/SomcPhotoPro.apk",
 	presigned: true,
 	overrides: ["Aperture"],
 	dex_preopt: {
@@ -30,9 +30,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "SomcCinemaPro-YodoNagara",
+	name: "SomcCinemaPro",
 	owner: "sony",
-	apk: "SomcCinemaPro-YodoNagara/SomcCinemaPro-YodoNagara.apk",
+	apk: "SomcCinemaPro/SomcCinemaPro.apk",
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -43,9 +43,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "SomcVideoPro-YodoNagara",
+	name: "SomcVideoPro",
 	owner: "sony",
-	apk: "SomcVideoPro-YodoNagara/SomcVideoPro-YodoNagara.apk",
+	apk: "SomcVideoPro/SomcVideoPro.apk",
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -95,9 +95,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "CameraPanorama-YodoNagara",
+	name: "CameraPanorama-Yodo",
 	owner: "sony",
-	apk: "CameraPanorama-YodoNagara/CameraPanorama-YodoNagara.apk",
+	apk: "CameraPanorama-Yodo/CameraPanorama-Yodo.apk",
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -108,9 +108,34 @@ android_app_import {
 }
 
 android_app_import {
-	name: "SomcMovieCreator-YodoNagara",
+	name: "SomcMovieCreator-AsahiYodo",
 	owner: "sony",
-	apk: "SomcMovieCreator-YodoNagara/SomcMovieCreator-YodoNagara.apk",
+	apk: "SomcMovieCreator-AsahiYodo/SomcMovieCreator-AsahiYodo.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	preprocessed: true,
+	product_specific: true,
+}
+
+android_app_import {
+	name: "SomcCameraApp-Shimanto",
+	owner: "sony",
+	apk: "SomcCameraApp-Shimanto/SomcCameraApp-Shimanto.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+}
+
+android_app_import {
+	name: "SomcCameraCalibration-Pdx245",
+	owner: "sony",
+	apk: "SomcCameraCalibration-Pdx245/SomcCameraCalibration-Pdx245.apk",
 	presigned: true,
 	dex_preopt: {
 		enabled: false,

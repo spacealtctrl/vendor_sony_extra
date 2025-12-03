@@ -20,11 +20,13 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    SomcPhotoPro-Yodo \
-    SomcCinemaPro-YodoNagara \
-    SomcVideoPro-YodoNagara \
+    SomcPhotoPro \
+    SomcCinemaPro \
+    SomcVideoPro \
     CameraCommon \
     CameraAddonPermission \
     CameraCommonPermission \
-    CameraPanorama-YodoNagara \
-    SomcMovieCreator-YodoNagara
+    CameraPanorama-Yodo \
+    SomcMovieCreator-AsahiYodo \
+    SomcCameraApp-Shimanto \
+    SomcCameraCalibration-Pdx245

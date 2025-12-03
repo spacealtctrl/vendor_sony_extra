@@ -1,4 +1,4 @@
-# Copyright (C) 2016 The Android Open Source Project
+# Copyright (C) 2020 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
 # limitations under the License.
 
 #
-# XBox X/S Controller = 1914
+# XBox USB Controller
 #
 
 key 304   BUTTON_A
@@ -22,9 +22,7 @@ key 307   BUTTON_X
 key 308   BUTTON_Y
 key 310   BUTTON_L1
 key 311   BUTTON_R1
-key 314   BUTTON_SELECT
-key 315   BUTTON_START
-key 316   BUTTON_MODE
+
 key 317   BUTTON_THUMBL
 key 318   BUTTON_THUMBR
 
@@ -44,3 +42,18 @@ axis 0x05 RTRIGGER
 # Hat.
 axis 0x10 HAT_X
 axis 0x11 HAT_Y
+
+# Mapping according to https://www.kernel.org/doc/Documentation/input/gamepad.txt
+
+# Two overlapping rectangles
+key 314   BUTTON_SELECT
+
+# The branded "X" button in the center of the controller
+key 316   BUTTON_MODE
+
+# Three parallel horizontal lines (hamburger menu)
+key 315   BUTTON_START
+
+#Button below the "X" button
+key 167   MEDIA_RECORD
+

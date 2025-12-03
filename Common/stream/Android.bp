@@ -26,29 +26,31 @@ android_app_import {
    	dex_preopt: {
 		enabled: false,
 	},
-	privileged: true,
+	product_specific: true,
 }
 
 android_app_import {
 	name: "GamingFanService",
 	owner: "sony",
 	apk: "proprietary/system/priv-app/GamingFanService/GamingFanService.apk",
-	certificate: "platform",
+	presigned: true,
+	preprocessed: true,
 	dex_preopt: {
 		enabled: false,
 	},
-	privileged: true,
+	product_specific: true,
 }
 
 android_app_import {
 	name: "ThermalFanService",
 	owner: "sony",
 	apk: "proprietary/system/priv-app/ThermalFanService/ThermalFanService.apk",
-	certificate: "platform",
+	presigned: true,
+	preprocessed: true,
 	dex_preopt: {
 		enabled: false,
 	},
-	privileged: true,
+	product_specific: true,
 }
 
 dex_import {

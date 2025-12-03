@@ -16,7 +16,7 @@
 <permissions>
     <library
         name="com.sony.threesixtyra.audiofx"
-        file="/system_ext/framework/com.sony.threesixtyra.audiofx.jar"
+        file="/product/framework/com.sony.threesixtyra.audiofx.jar"
     />
 </permissions>
 
