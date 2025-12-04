@@ -4,8 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := $(call my-dir)
-
 # Soong Namespace
 PRODUCT_SOONG_NAMESPACES += \
     vendor/sony/extra
