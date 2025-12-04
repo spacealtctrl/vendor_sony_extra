@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <!-- Define Sony custom permissions -->
+    <permission name="com.sonymobile.permission.SECURE_DATA_MANAGER"
+        protectionLevel="signature|privileged" />
+</permissions>
