@@ -12,7 +12,7 @@
     </privapp-permissions>
 
     <!-- Sony Music -->
-    <privapp-permissions package="jp.co.sony.mc.musicpro">
+    <privapp-permissions package="com.sonyericsson.music">
         <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
         <permission name="android.permission.SCHEDULE_EXACT_ALARM"/>
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
