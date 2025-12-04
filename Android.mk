@@ -42,3 +42,12 @@ LOCAL_OVERRIDES_PACKAGES := Aperture Snap Camera2
 LOCAL_ENFORCE_USES_LIBRARIES := false
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
+
+# Privapp Permissions
+include $(CLEAR_VARS)
+LOCAL_MODULE := privapp-permissions-extra.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT_ETC)/permissions
+LOCAL_SRC_FILES := permissions/privapp-permissions-extra.xml
+include $(BUILD_PREBUILT)
