@@ -1,0 +1,38 @@
+LOCAL_PATH := $(call my-dir)
+
+# Aurora Store
+include $(CLEAR_VARS)
+LOCAL_MODULE := AuroraStore
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_BUILT_MODULE_STEM := package.apk
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_CERTIFICATE := platform
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_SRC_FILES := Aurora/AuroraStore.apk
+include $(BUILD_PREBUILT)
+
+# Sony Music - replaces Lineage Twelve
+include $(CLEAR_VARS)
+LOCAL_MODULE := SonyMusic
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_BUILT_MODULE_STEM := package.apk
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_CERTIFICATE := platform
+LOCAL_SRC_FILES := Music/music.apk
+LOCAL_OVERRIDES_PACKAGES := Twelve Music Eleven
+include $(BUILD_PREBUILT)
+
+# PhotoPro - replaces Lineage Aperture
+include $(CLEAR_VARS)
+LOCAL_MODULE := PhotoPro
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_BUILT_MODULE_STEM := package.apk
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_CERTIFICATE := platform
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_SRC_FILES := PhotoPro/PhotoPro.apk
+LOCAL_OVERRIDES_PACKAGES := Aperture Snap Camera2
+include $(BUILD_PREBUILT)
